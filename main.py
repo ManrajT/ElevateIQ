@@ -78,8 +78,7 @@ def addIncidents(incidents, incidents_being_added, key, translateIpToEmployeeId,
         employeeInfo = getOrInitEmployeeInfo(incidents, employeeId)
         priority = incident['priority'] 
         groupedByPriority = employeeInfo[priority]
-        groupedByPriority["count"] = groupedByPriority["count"] + 1
-        groupedByPriority["incidents"]         
+        groupedByPriority["count"] = groupedByPriority["count"] + 1        
         whereToInsert = 0
         for prior in groupedByPriority["incidents"]:
             if prior['timestamp'] > incident['timestamp']:
