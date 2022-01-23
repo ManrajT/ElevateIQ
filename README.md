@@ -9,7 +9,9 @@ Instructions on how to run:
    - uvicorn main:app --reload --port 9000
 
 - Run queries by either: 
+   
    a) open browser at 127.0.0.1:9000/incidents
+   
    b) curl -X 'GET' 'http://127.0.0.1:9000/incidents' -H 'accept: application/js
 
 
