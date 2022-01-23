@@ -64,10 +64,6 @@ def addIncidents(incidents, incidents_being_added, key, translateIpToEmployeeId,
                 ip_address = machine_ip
             elif (ip is not None):
                 ip_address = ip
-            else:
-                print(internal_ip)
-                print(machine_ip)
-                print(incident)
             employeeId = ip_to_employeeId[ip_address] 
         elif key == "identifier": 
             identifier = incident[key]
