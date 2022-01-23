@@ -25,7 +25,7 @@ def refresh_incidents():
     ip_to_employeeId = request.json() 
 
     denials = safely_get_data("https://incident-api.use1stag.elevatesecurity.io/incidents/denial/")  
-    denials = addIncidents(current_incidents, denials, 'reported_by', False, ip_to_employeeId, "denial")
+    addIncidents(current_incidents, denials, 'reported_by', False, ip_to_employeeId, "denial")
 
     intrusions = safely_get_data("https://incident-api.use1stag.elevatesecurity.io/incidents/intrusion/")
     addIncidents(current_incidents, intrusions, 'internal_ip', True, ip_to_employeeId, "intrusion")
